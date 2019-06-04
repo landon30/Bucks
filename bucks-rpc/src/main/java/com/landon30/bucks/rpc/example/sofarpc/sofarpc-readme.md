@@ -61,7 +61,16 @@ ce%3Dcom.landon30.bucks.rpc.example.sofarpc.service.HelloService%26timeout%3D0%2
 tTime%3D1559620360881%26id%3Drpc-cfg-0%26uniqueId%3D%26rpcVer%3D50504]
 ```
 4. 启动client，指定zk，发现两个服务均有请求和输出，关闭其中一个不影响client
+5. 测试启动client，先启动server1，然后关闭，此时client初始报错服务不可用；此时马上把server2启动，client访问正常
+
+
+### 使用zk集群
+1. 测试使用伪集群
+2. 即使关掉所有的zk，client访问服务器正常，应该是proxy缓存了provider的地址，只要provider的服务方没有挂就可以
+3. 关闭2个zk后，即没有了’过半存活‘后，新client和server报错'Failed to register consumer to zookeeperRegistry!'和'Failed to register provider to zookeeperRegistry!'；而当关闭1个zk后，则无新client和server都无影响
+3. 重启1个zk后，新client和server均恢复正常
 
 ### 注意的地方
 1. 使用zk的例子pom.xml指定的curator-recipes版本要是2.9.1，具体详细参考[issues](https://github.com/sofastack/sofa-rpc/issues/331)
 2. 可参考源码com.alipay.sofa.rpc.registry.zk#ZookeeperRegistry，包括 在zookeeper上存放的数据结构
+3. 使用zk集群的方式是指定的address用,分割
