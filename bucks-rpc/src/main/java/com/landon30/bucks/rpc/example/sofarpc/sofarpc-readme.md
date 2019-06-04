@@ -64,3 +64,4 @@ tTime%3D1559620360881%26id%3Drpc-cfg-0%26uniqueId%3D%26rpcVer%3D50504]
 
 ### 注意的地方
 1. 使用zk的例子pom.xml指定的curator-recipes版本要是2.9.1，具体详细参考[issues](https://github.com/sofastack/sofa-rpc/issues/331)
+2. 可参考源码com.alipay.sofa.rpc.registry.zk#ZookeeperRegistry，包括 在zookeeper上存放的数据结构
