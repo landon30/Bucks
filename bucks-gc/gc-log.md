@@ -39,6 +39,3 @@ CommandLine flags: -XX:InitialHeapSize=1048576 -XX:MaxHeapSize=1048576 -XX:+Prin
 ```
 
 ### 测试参数4
-
-```
-``
