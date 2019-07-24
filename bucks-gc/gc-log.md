@@ -35,7 +35,7 @@ CommandLine flags: -XX:InitialHeapSize=1048576 -XX:MaxHeapSize=1048576 -XX:+Prin
 
 ### 总结1 - 常规gc日志3参数
 ```
-
+-Xloggc:gc_%t.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps
 ```
 
 ### 测试参数4
