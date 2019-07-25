@@ -4,6 +4,7 @@
 
 package com.landon30.bucks.gc.example;
 
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -15,11 +16,17 @@ import java.util.concurrent.TimeUnit;
 public class GC4LogExample {
 
     public static void main(String[] args) throws Exception {
-        byte[] b1 = new byte[65536];
+        byte[] b1 = new byte[1024];
+        byte[] b2 = new byte[1024];
 
         while (true) {
             TimeUnit.MILLISECONDS.sleep(10);
             byte[] bytes = new byte[1024];
+
+            int seed = ThreadLocalRandom.current().nextInt(100);
+            if (seed == 0) {
+                System.gc();
+            }
         }
     }
 }
