@@ -49,7 +49,18 @@ Total time for which application threads were stopped: 0.0092963 seconds, Stoppi
 ```
 
 ### 测试参数5
-
+  - 增加PrintTenuringDistribution参数后，输出Desired survivor size...,age...
 ```
 -Xloggc:gc_%t.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCApplicationStoppedTime -XX:+PrintTenuringDistribution
 ```
+
+```
+Desired survivor size 524288 bytes, new threshold 7 (max 15)
+```
+
+### 测试参数6
+  - 增加-XX:+PrintHeapAtGC
+  - 增加-XX:+PrintPromotionFailure
+  
+### TODO
+1. 加了某些常用日志参数后，会不会gc日志过大
