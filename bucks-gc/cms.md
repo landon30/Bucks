@@ -8,6 +8,7 @@
  - 另外注意[JDK-6862534 : -XX:NewRatio completely ignored when combined with -XX:+UseConcMarkSweepGC](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6862534),不过新版本已修复
  - 所以建议手动指定新生代大小参数(-XX:NewRatio或者-Xmn或者-XX:NewSize/-XX:MaxNewSize)
  - The flag -XmnNNN is equivalent to -XX:NewSize=NNN and -XX:MaxNewSize=NNN
+ - There is also -Xmn, but that is just a short form for NewSize==MaxNewSize
 
 ```
 -XX:+UseConcMarkSweepGC
