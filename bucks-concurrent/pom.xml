@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.landon30.bucks</groupId>
-	<artifactId>bucks-gc</artifactId>
+	<artifactId>bucks-concurrent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>bucks-gc</name>
+	<name>gc-concurrent</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -22,4 +22,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 </project>
