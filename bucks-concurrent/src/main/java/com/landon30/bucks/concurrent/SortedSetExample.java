@@ -67,7 +67,8 @@ public class SortedSetExample {
             set.add(element1);
             set.add(element2);
 
-            element2.setScore(70);
+            // TODO 如果这里改为90
+            element2.setScore(90);
             boolean isRemove = set.remove(element2);
             if (!isRemove) {
                 System.out.println(isRemove);
