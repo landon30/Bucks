@@ -19,6 +19,8 @@ import java.util.concurrent.ConcurrentSkipListSet;
  * 测试步骤 <br>
  * 1. 本例可以将循环调大 <br>
  * 2. 可分别测试 element2.setScore(70)和element2.setScore(90) <br>
+ * 
+ * ref:https://stackoverflow.com/questions/44026315/issue-with-concurrentskiplistset-remove
  *
  * @date 2019-11-29
  * @author landon30
